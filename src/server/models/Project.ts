@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import { model, Schema, Document } from "mongoose";
 
-const ProjectSchema = new mongoose.Schema({
+const ProjectSchema = new Schema({
   name: {
     type: String,
   },
@@ -12,9 +12,9 @@ const ProjectSchema = new mongoose.Schema({
     enum: ["Not Started", "In Progress", "Blocked", "Done"],
   },
   clientId: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
 });
 
-module.exports = mongoose.model("Project", ProjectSchema);
+export default model<Document>("Project", ProjectSchema);
