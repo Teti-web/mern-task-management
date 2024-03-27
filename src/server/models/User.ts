@@ -10,6 +10,9 @@ const UserSchema = new Schema({
   phone: {
     type: String,
   },
+  password: {
+    type: String,
+  },
 });
 
 export default model<Document>("User", UserSchema);
