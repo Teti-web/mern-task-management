@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { createHandler } from "graphql-http";
 import mongoose from "mongoose";
+import schema from "./schema/schema";
 
 dotenv.config();
 
@@ -33,7 +34,7 @@ app.use(cors());
 app.use(
   "/graphql",
   createHandler({
-    // schema,
+    schema,
     graphiql: process.env.NODE_ENV === "development",
   } as import("graphql-http").HandlerOptions<any, any, any>)
 );
