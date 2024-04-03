@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
-// import jwt from "jsonwebtoken";
-import User from "../models/User";
+import jwt, { Secret } from "jsonwebtoken";
+import User, { IUser } from "../models/User";
 import Project from "../models/Project";
 import {
   GraphQLID,
@@ -106,7 +106,46 @@ const mutation = new GraphQLObjectType({
         }
       },
     },
-    //TODO: login
+    // login
+    loginUser: {
+      type: UserType,
+      args: {
+        email: { type: new GraphQLNonNull(GraphQLString) },
+        password: { type: new GraphQLNonNull(GraphQLString) },
+      },
+      async resolve(_parent, args) {
+        try {
+          // Find user by email
+          const user: IUser | null = await User.findOne({ email: args.email });
+          if (!user) {
+            throw new Error("User not found.");
+          }
+
+          // Check if password matches
+          const isPasswordValid = await bcrypt.compare(
+            args.password,
+            user.password
+          );
+          if (!isPasswordValid) {
+            throw new Error("Invalid password.");
+          }
+
+          // Generate JWT token
+          const jwtKey: Secret | undefined = process.env.SECRET_KEY;
+          if (!jwtKey) {
+            throw new Error("JWT secret key is not defined.");
+          }
+
+          const token = jwt.sign({ userId: user.id }, jwtKey, {
+            expiresIn: "1h",
+          });
+
+          return token;
+        } catch (error: any) {
+          throw new Error(error.message);
+        }
+      },
+    },
     //TODO: add a project
     //TODO: delete a project
     //TODO: update a project
