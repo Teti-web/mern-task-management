@@ -1,6 +1,6 @@
 import { Size, Style } from "@/constants/constants";
 import { FC } from "react";
-import { IconStyleButton } from "./constants";
+import { IconStyleButton, BUTTON_TEST_ID } from "./constants";
 
 export interface ButtonType {
   label: string;
@@ -58,13 +58,23 @@ const Button: FC<ButtonType> = ({
     className += " flex items-center w-max gap-[4px]";
     if (isLink) {
       return (
-        <a href={link} className={className} aria-disabled={isDisabled}>
+        <a
+          href={link}
+          className={className}
+          aria-disabled={isDisabled}
+          data-testid={BUTTON_TEST_ID}
+        >
           <img src={icon} alt={altIcon} /> {label}
         </a>
       );
     } else {
       return (
-        <button onClick={onClick} className={className} disabled={isDisabled}>
+        <button
+          onClick={onClick}
+          className={className}
+          disabled={isDisabled}
+          data-testid={BUTTON_TEST_ID}
+        >
           <img src={icon} alt={altIcon} /> {label}
         </button>
       );
@@ -73,14 +83,24 @@ const Button: FC<ButtonType> = ({
     className += " flex items-center w-max gap-[4px]";
     if (isLink) {
       return (
-        <a href={link} className={className} aria-disabled={isDisabled}>
+        <a
+          href={link}
+          className={className}
+          aria-disabled={isDisabled}
+          data-testid={BUTTON_TEST_ID}
+        >
           {label}
           <img src={icon} alt={altIcon} />
         </a>
       );
     } else {
       return (
-        <button onClick={onClick} className={className} disabled={isDisabled}>
+        <button
+          onClick={onClick}
+          className={className}
+          disabled={isDisabled}
+          data-testid={BUTTON_TEST_ID}
+        >
           {label}
           <img src={icon} alt={altIcon} />
         </button>
@@ -89,13 +109,23 @@ const Button: FC<ButtonType> = ({
   } else if (iconStyle === IconStyleButton.ICON_ONLY) {
     if (isLink) {
       return (
-        <a href={link} className={className} aria-disabled={isDisabled}>
+        <a
+          href={link}
+          className={className}
+          aria-disabled={isDisabled}
+          data-testid={BUTTON_TEST_ID}
+        >
           <img src={icon} alt={altIcon} />
         </a>
       );
     } else {
       return (
-        <button onClick={onClick} className={className} disabled={isDisabled}>
+        <button
+          onClick={onClick}
+          className={className}
+          disabled={isDisabled}
+          data-testid={BUTTON_TEST_ID}
+        >
           <img src={icon} alt={altIcon} />
         </button>
       );
@@ -103,7 +133,12 @@ const Button: FC<ButtonType> = ({
   }
 
   return (
-    <button onClick={onClick} className={className} disabled={isDisabled}>
+    <button
+      onClick={onClick}
+      className={className}
+      disabled={isDisabled}
+      data-testid={BUTTON_TEST_ID}
+    >
       {label}
     </button>
   );
