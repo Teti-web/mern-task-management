@@ -3,6 +3,7 @@ import Button from "@components/UI-kit/Button/Button";
 import { IconStyleButton } from "@components/UI-kit/Button/constants";
 import { Size, Style } from "@/constants/constants";
 import wetchat from "@assets/wechat.png";
+import Input from "@/components/UI-kit/Input/Input";
 
 const UIkit: FC = () => {
   return (
@@ -58,6 +59,9 @@ const UIkit: FC = () => {
           style={Style.SECONDARY}
           size={Size.LARGE}
         />
+      </div>
+      <div className=" pt-3">
+        <Input isLabel label="label" type="text" placeholder="input text" />
       </div>
     </div>
   );

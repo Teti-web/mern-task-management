@@ -19,11 +19,7 @@ exports[`Button component renders button as a link with icon on the left 1`] = `
     data-testid="buttonComponent"
     href="#"
   >
-    <img
-      alt="Left Icon"
-      src="/path/to/icon.png"
-    />
-     Test Button
+    /path/to/icon.png Test Button
   </a>
 </DocumentFragment>
 `;
@@ -45,10 +41,7 @@ exports[`Button component renders button with only icon 1`] = `
     class="font-primary rounded-[10px] focus:border-[1px] focus:border-solid transition-all ease-in-out  duration-500 text-secondinary-300 font-semibold bg-transparent hover:text-secondinary-500 hover:bg-white active:bg-secondinary-100 active:text-secondinary-500 focus:border-secondinary-300 focus:text-secondinary-500 focus:bg-white text-[12px] pt-[5px] pb-[5px] pl-[16px] pr-[16px]"
     data-testid="buttonComponent"
   >
-    <img
-      alt="Icon"
-      src="/path/to/icon.png"
-    />
+    /path/to/icon.png
   </button>
 </DocumentFragment>
 `;

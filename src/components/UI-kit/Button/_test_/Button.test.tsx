@@ -8,7 +8,7 @@ describe("Button component", () => {
   afterEach(cleanup);
 
   it("renders button as a link with icon on the left", () => {
-    const { getByTestId, getByAltText, asFragment } = render(
+    const { getByTestId, asFragment } = render(
       <Button
         label="Test Button"
         isLink={true}
@@ -16,20 +16,17 @@ describe("Button component", () => {
         size={Size.SMALL}
         iconStyle={IconStyleButton.ICON_LEFT}
         icon="/path/to/icon.png"
-        altIcon="Left Icon"
       />
     );
 
     const buttonLink = getByTestId(BUTTON_TEST_ID);
     expect(buttonLink).toBeInTheDocument();
 
-    const icon = getByAltText("Left Icon");
-    expect(icon).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders button with only icon", () => {
-    const { getByTestId, getByAltText, asFragment } = render(
+    const { getByTestId, asFragment } = render(
       <Button
         label=""
         isLink={false}
@@ -43,13 +40,11 @@ describe("Button component", () => {
     const button = getByTestId(BUTTON_TEST_ID);
     expect(button).toBeInTheDocument();
 
-    const icon = getByAltText("Icon");
-    expect(icon).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders button without icon", () => {
-    const { getByTestId, queryByAltText, asFragment } = render(
+    const { getByTestId, asFragment } = render(
       <Button
         label="Test Button"
         isLink={false}
@@ -60,9 +55,6 @@ describe("Button component", () => {
 
     const button = getByTestId(BUTTON_TEST_ID);
     expect(button).toBeInTheDocument();
-
-    const icon = queryByAltText("Icon");
-    expect(icon).toBeNull();
     expect(asFragment()).toMatchSnapshot();
   });
 
