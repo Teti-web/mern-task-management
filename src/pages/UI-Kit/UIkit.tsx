@@ -2,10 +2,14 @@ import { FC } from "react";
 import Button from "@components/UI-kit/Button/Button";
 import { IconStyleButton } from "@components/UI-kit/Button/constants";
 import { Size, Style } from "@/constants/constants";
-import wetchat from "@assets/wechat.png";
 import Input from "@/components/UI-kit/Input/Input";
+import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 
 const UIkit: FC = () => {
+  const handleChange = () => {
+    console.log("changed");
+  };
+
   return (
     <div>
       <h1>UI-kit page</h1>
@@ -19,7 +23,7 @@ const UIkit: FC = () => {
         <Button
           isLink={true}
           isIcon={true}
-          icon={wetchat}
+          icon={<ChatBubbleLeftEllipsisIcon className=" h-[18px] w-[18px]" />}
           iconStyle={IconStyleButton.ICON_LEFT}
           label="label"
           style={Style.PRIMARY}
@@ -36,7 +40,7 @@ const UIkit: FC = () => {
         <Button
           isLink={true}
           isIcon={true}
-          icon={wetchat}
+          icon={<ChatBubbleLeftEllipsisIcon className=" h-[18px] w-[18px] " />}
           iconStyle={IconStyleButton.ICON_LEFT}
           label="label"
           style={Style.MINIMAL}
@@ -53,7 +57,7 @@ const UIkit: FC = () => {
         <Button
           isLink={true}
           isIcon={true}
-          icon={wetchat}
+          icon={<ChatBubbleLeftEllipsisIcon className=" h-[18px] w-[18px] " />}
           iconStyle={IconStyleButton.ICON_LEFT}
           label="label"
           style={Style.SECONDARY}
@@ -61,7 +65,13 @@ const UIkit: FC = () => {
         />
       </div>
       <div className=" pt-3">
-        <Input isLabel label="label" type="text" placeholder="input text" />
+        <Input
+          isLabel
+          label="label"
+          type="text"
+          placeholder="input text"
+          onChange={handleChange}
+        />
       </div>
     </div>
   );

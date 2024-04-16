@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component calls onChange event handler 1`] = `
+<DocumentFragment>
+  <input
+    class="font-primary font-medium text-[12px] rounded-[10px] border-[1px] border-primary-100 text-secondinary-500 pt-[16px] pl-[20px] pb-[16px] pr-[20px]placeholder:text-secondinary-400 hover:border-primary-300 transition-all duration-500 ease-in-out focus:border-primary-300 active:border-primary-300 block"
+    data-testid="inputComponent"
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Input component renders input with label 1`] = `
+<DocumentFragment>
+  <label
+    class="font-primary text-secondinary-500 font-semibold text-[14px] leading-4 grid gap-[16px]"
+  >
+    Username
+    <input
+      class="font-primary font-medium text-[12px] rounded-[10px] border-[1px] border-primary-100 text-secondinary-500 pt-[16px] pl-[20px] pb-[16px] pr-[20px]placeholder:text-secondinary-400 hover:border-primary-300 transition-all duration-500 ease-in-out focus:border-primary-300 active:border-primary-300 block"
+      data-testid="inputComponent"
+      type="text"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Input component renders input with placeholder 1`] = `
+<DocumentFragment>
+  <input
+    class="font-primary font-medium text-[12px] rounded-[10px] border-[1px] border-primary-100 text-secondinary-500 pt-[16px] pl-[20px] pb-[16px] pr-[20px]placeholder:text-secondinary-400 hover:border-primary-300 transition-all duration-500 ease-in-out focus:border-primary-300 active:border-primary-300 block"
+    data-testid="inputComponent"
+    placeholder="Enter your username"
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Input component renders input without label 1`] = `
+<DocumentFragment>
+  <input
+    class="font-primary font-medium text-[12px] rounded-[10px] border-[1px] border-primary-100 text-secondinary-500 pt-[16px] pl-[20px] pb-[16px] pr-[20px]placeholder:text-secondinary-400 hover:border-primary-300 transition-all duration-500 ease-in-out focus:border-primary-300 active:border-primary-300 block"
+    data-testid="inputComponent"
+    type="text"
+  />
+</DocumentFragment>
+`;

@@ -6,9 +6,16 @@ export interface InputType {
   placeholder?: string;
   isLabel: boolean;
   label?: string;
+  onChange: () => void;
 }
 
-const Input: FC<InputType> = ({ type, placeholder, isLabel, label }) => {
+const Input: FC<InputType> = ({
+  type,
+  placeholder,
+  isLabel,
+  label,
+  onChange,
+}) => {
   const className =
     "font-primary font-medium text-[12px] rounded-[10px] border-[1px] border-primary-100 text-secondinary-500 pt-[16px] pl-[20px] pb-[16px] pr-[20px]placeholder:text-secondinary-400 hover:border-primary-300 transition-all duration-500 ease-in-out focus:border-primary-300 active:border-primary-300 block";
 
@@ -23,6 +30,7 @@ const Input: FC<InputType> = ({ type, placeholder, isLabel, label }) => {
         className={className}
         type={type}
         placeholder={placeholder}
+        onChange={onChange}
       />
     </label>
   ) : (
@@ -31,6 +39,7 @@ const Input: FC<InputType> = ({ type, placeholder, isLabel, label }) => {
       className={className}
       type={type}
       placeholder={placeholder}
+      onChange={onChange}
     />
   );
 };
