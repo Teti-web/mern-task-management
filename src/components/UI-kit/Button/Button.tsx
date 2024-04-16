@@ -10,8 +10,7 @@ export interface ButtonType {
   link?: string;
   isIcon?: boolean;
   iconStyle?: IconStyleButton;
-  icon?: string;
-  altIcon?: string;
+  icon?: string | JSX.Element;
   isDisabled?: boolean;
   onClick?: () => void;
 }
@@ -22,7 +21,6 @@ const Button: FC<ButtonType> = ({
   link = "#",
   iconStyle,
   icon,
-  altIcon = "Icon",
   onClick,
   isDisabled,
   style = Style.PRIMARY,
@@ -64,7 +62,7 @@ const Button: FC<ButtonType> = ({
           aria-disabled={isDisabled}
           data-testid={BUTTON_TEST_ID}
         >
-          <img src={icon} alt={altIcon} /> {label}
+          {icon} {label}
         </a>
       );
     } else {
@@ -75,7 +73,7 @@ const Button: FC<ButtonType> = ({
           disabled={isDisabled}
           data-testid={BUTTON_TEST_ID}
         >
-          <img src={icon} alt={altIcon} /> {label}
+          {icon} {label}
         </button>
       );
     }
@@ -90,7 +88,7 @@ const Button: FC<ButtonType> = ({
           data-testid={BUTTON_TEST_ID}
         >
           {label}
-          <img src={icon} alt={altIcon} />
+          {icon}
         </a>
       );
     } else {
@@ -102,7 +100,7 @@ const Button: FC<ButtonType> = ({
           data-testid={BUTTON_TEST_ID}
         >
           {label}
-          <img src={icon} alt={altIcon} />
+          {icon}
         </button>
       );
     }
@@ -115,7 +113,7 @@ const Button: FC<ButtonType> = ({
           aria-disabled={isDisabled}
           data-testid={BUTTON_TEST_ID}
         >
-          <img src={icon} alt={altIcon} />
+          {icon}
         </a>
       );
     } else {
@@ -126,7 +124,7 @@ const Button: FC<ButtonType> = ({
           disabled={isDisabled}
           data-testid={BUTTON_TEST_ID}
         >
-          <img src={icon} alt={altIcon} />
+          {icon}
         </button>
       );
     }
