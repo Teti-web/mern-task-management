@@ -14,3 +14,15 @@ body {
   overflow-x: hidden;
   background-color: #fafafa;
 }
+
+h2 {
+  @apply font-primary text-secondinary-500 font-semibold text-[24px];
+}
+
+h3 {
+  @apply font-primary text-secondinary-500 font-semibold text-[14px];
+}
+
+p {
+  @apply font-primary font-normal lg:font-medium lg:text-[14px] text-[12px] text-secondinary-500;
+}
