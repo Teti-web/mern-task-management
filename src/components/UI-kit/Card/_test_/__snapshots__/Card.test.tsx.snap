@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card componet renders with correct data 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-white rounded-[10px] p-[20px] md:p-[24px] grid grid-cols-1 gap-[16px] max-w-[340px]"
+    data-testid="cardComponent"
+  >
+    <img
+      alt="Mock Alt Image"
+      class="rounded-[10px] object-center object-cover w-full h-[110px]"
+      src="mock-image-url"
+    />
+    <div
+      class="font-primary"
+    >
+      <h3
+        class="text-secondinary-500 font-semibold text-left text-[16px]"
+      >
+        Mock Title
+      </h3>
+      <p
+        class="text-[12px] font-medium text-left text-secondinary-400 pt-[5px]"
+      >
+        Mock Subtitle
+      </p>
+    </div>
+    <div
+      class="flex flex-col gap-[8px]"
+    >
+      <div
+        class="flex justify-between font-primary font-medium text-[16px]"
+      >
+        <p
+          class="text-secondinary-500"
+        >
+          Process
+        </p>
+        <p
+          class="text-primary-500"
+        >
+          50%
+        </p>
+      </div>
+      <div
+        class="bg-primary-200 rounded-[8px] w-full h-[8px]"
+      >
+        <div
+          class="bg-primary-500 rounded-[8px] h-full relative
+         after:rounded-full after:bg-primary-500 after:block after:border-[2px] after:border-white after:border-solid after:w-[16px] after:h-[16px] after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2"
+          style="width: 50%;"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-row gap-[5px]"
+    >
+      <svg
+        aria-hidden="true"
+        class="w-[24px] h-[24px] text-secondinary-400"
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <p
+        class="font-primary font-medium text-[16px] text-secondinary-500"
+      >
+        Mock Time
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

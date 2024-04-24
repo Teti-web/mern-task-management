@@ -4,11 +4,16 @@ import { IconStyleButton } from "@components/UI-kit/Button/constants";
 import { Size, Style } from "@/constants/constants";
 import Input from "@/components/UI-kit/Input/Input";
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
+import Card from "@/components/UI-kit/Card/Card";
+import ImageTesting from "@assets/Image.jpg";
 
 const UIkit: FC = () => {
   const handleChange = () => {
     console.log("changed");
   };
+
+  const progressValue = 75;
 
   return (
     <div>
@@ -71,6 +76,16 @@ const UIkit: FC = () => {
           type="text"
           placeholder="input text"
           onChange={handleChange}
+        />
+      </div>
+      <div className="w-2/3 pt-3">
+        <ProgressBar value={30} />
+        <Card
+          img={ImageTesting}
+          title="Creating Mobile App Design"
+          suptitle="UI UX Design"
+          timeCreated="3 Days Left"
+          progressValue={progressValue}
         />
       </div>
     </div>

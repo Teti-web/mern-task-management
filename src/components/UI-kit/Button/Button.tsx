@@ -2,7 +2,7 @@ import { Size, Style } from "@/constants/constants";
 import { FC } from "react";
 import { IconStyleButton, BUTTON_TEST_ID } from "./constants";
 
-export interface ButtonType {
+export type ButtonType = {
   label: string;
   isLink: boolean;
   style: Style;
@@ -13,7 +13,7 @@ export interface ButtonType {
   icon?: string | JSX.Element;
   isDisabled?: boolean;
   onClick?: () => void;
-}
+};
 
 const Button: FC<ButtonType> = ({
   label,
