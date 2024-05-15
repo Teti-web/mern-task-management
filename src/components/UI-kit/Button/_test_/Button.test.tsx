@@ -1,8 +1,9 @@
 import "@testing-library/jest-dom";
 import { render, cleanup } from "@testing-library/react";
-import Button from "../Button";
-import { Style, Size } from "@/constants/constants";
+import { Style, Size } from "@constants/constants";
+
 import { IconStyleButton, BUTTON_TEST_ID } from "../constants";
+import Button from "../Button";
 
 describe("Button component", () => {
   afterEach(cleanup);

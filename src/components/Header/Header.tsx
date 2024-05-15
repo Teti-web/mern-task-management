@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { GlobeEuropeAfricaIcon } from "@heroicons/react/24/outline";
-import Button from "../UI-kit/Button/Button";
-import { Style, Size } from "@/constants/constants";
-import Select from "../Select/Select";
+import { Style, Size } from "@constants/constants";
 import { useTranslation } from "react-i18next";
+import Button from "@components/UI-kit/Button/Button";
+import Select from "@components/UI-kit/Select/Select";
 
 export type HeaderType = {
   logo: string;
@@ -12,11 +12,14 @@ export type HeaderType = {
 };
 
 const Header: FC<HeaderType> = ({ logo, isAuthication, btnLabel }) => {
+  const [isGlobeHovered, setIsGlobeHovered] = useState(false);
+  const [buttonValue, setButtonValue] = useState("");
   const { t, i18n } = useTranslation();
 
   const languageChange = (language: string) => {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
+    setButtonValue(t(`language-${language}`));
   };
 
   if (!isAuthication) {
@@ -24,15 +27,23 @@ const Header: FC<HeaderType> = ({ logo, isAuthication, btnLabel }) => {
       <header className="w-full flex justify-between items-center p-[30px]">
         <p>{logo}</p>
         <div className="flex items-center gap-[15px] relative">
-          <div className="flex items-center gap-[3px] cursor-pointer hover:text-secondary-300 transition-all duration-300">
-            <GlobeEuropeAfricaIcon className="text-secondary-400 w-[24px] h-[24px]" />
+          <div
+            className="flex items-center gap-[3px] cursor-pointer"
+            onMouseEnter={() => setIsGlobeHovered(true)}
+            onMouseLeave={() => setIsGlobeHovered(false)}
+          >
+            <GlobeEuropeAfricaIcon
+              className={`w-[24px] h-[24px] transition-all duration-300 ${
+                isGlobeHovered ? "text-primary-500" : "text-secondinary-400 "
+              }`}
+            />
             <Select
-              selectName={t("selectLanguage")}
+              buttonValue={buttonValue}
               onChange={languageChange}
               options={[
-                { value: "en", text: t("language1") },
-                { value: "pl", text: t("language2") },
-                { value: "ukr", text: t("language3") },
+                { value: "en", text: t("language-en") },
+                { value: "pl", text: t("language-pl") },
+                { value: "ukr", text: t("language-ukr") },
               ]}
             />
           </div>
@@ -48,7 +59,7 @@ const Header: FC<HeaderType> = ({ logo, isAuthication, btnLabel }) => {
   }
   return (
     <div className="w-full flex justify-between items-center p-[30px]">
-      //TODO: when isAuthication
+      {/* //TODO: when isAuthication */}
     </div>
   );
 };

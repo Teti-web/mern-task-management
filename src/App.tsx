@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
-
 import UIkit from "@pages/UI-Kit/UIkit";
 
 const cache = new InMemoryCache({

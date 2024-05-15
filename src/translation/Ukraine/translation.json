@@ -1,7 +1,7 @@
 {
   "selectLanguage": "Виберіть мову",
-  "language1": "Англійська",
-  "language2": "Польська",
-  "language3": "Українська",
+  "language-en": "Англійська",
+  "language-pl": "Польська",
+  "language-ukr": "Українська",
   "btnSignIn": "Увійти"
 }

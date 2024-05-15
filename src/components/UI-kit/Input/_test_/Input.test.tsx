@@ -1,7 +1,8 @@
 import "@testing-library/jest-dom";
 import { render, fireEvent, cleanup } from "@testing-library/react";
-import Input from "../Input";
+
 import { INPUT_TEST_ID } from "../constans";
+import Input from "../Input";
 
 describe("Input component", () => {
   afterEach(cleanup);
