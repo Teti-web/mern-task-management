@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select componet calls onChange when an option is clicked 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full relative"
+  >
+    <button
+      class="flex justify-between items-center gap-[3px] text-secondary-500 w-full text-left font-primary font-medium text-[12px] px-[4px] py-[6px] transition-all ease-in-out duration-300 lg:text-[14px] hover:text-primary-500 focus:text-primary-600"
+    >
+      English 
+      <svg
+        aria-hidden="true"
+        class="w-[20px] h-[20px] text-secondary-500 transition-transform duration-300 "
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select componet opens and closes the dropdown when button is clicked 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full relative"
+  >
+    <button
+      class="flex justify-between items-center gap-[3px] text-secondary-500 w-full text-left font-primary font-medium text-[12px] px-[4px] py-[6px] transition-all ease-in-out duration-300 lg:text-[14px] hover:text-primary-500 focus:text-primary-600"
+    >
+      English 
+      <svg
+        aria-hidden="true"
+        class="w-[20px] h-[20px] text-secondary-500 transition-transform duration-300 "
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select componet renders Select component with default value 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full relative"
+  >
+    <button
+      class="flex justify-between items-center gap-[3px] text-secondary-500 w-full text-left font-primary font-medium text-[12px] px-[4px] py-[6px] transition-all ease-in-out duration-300 lg:text-[14px] hover:text-primary-500 focus:text-primary-600"
+    >
+      English 
+      <svg
+        aria-hidden="true"
+        class="w-[20px] h-[20px] text-secondary-500 transition-transform duration-300 "
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select componet renders Select component with provided button value 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full relative"
+  >
+    <button
+      class="flex justify-between items-center gap-[3px] text-secondary-500 w-full text-left font-primary font-medium text-[12px] px-[4px] py-[6px] transition-all ease-in-out duration-300 lg:text-[14px] hover:text-primary-500 focus:text-primary-600"
+    >
+      French 
+      <svg
+        aria-hidden="true"
+        class="w-[20px] h-[20px] text-secondary-500 transition-transform duration-300 "
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;

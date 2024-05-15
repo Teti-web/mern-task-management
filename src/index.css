@@ -16,10 +16,14 @@ body {
 }
 
 h2 {
-  @apply font-primary text-secondinary-500 font-semibold text-[24px];
+  @apply font-primary text-secondinary-500 font-semibold  text-[24px] lg:text-[32px];
 }
 
 h3 {
+  @apply font-primary text-secondinary-500 font-semibold text-[24px];
+}
+
+h4 {
   @apply font-primary text-secondinary-500 font-semibold text-[14px];
 }
 

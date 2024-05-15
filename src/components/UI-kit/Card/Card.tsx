@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { CARD_TEST_ID } from "./constants";
-import ProgressBar from "@/components/ProgressBar/ProgressBar";
 import { ClockIcon } from "@heroicons/react/24/outline";
+
+import ProgressBar from "../ProgressBar/ProgressBar";
+import { CARD_TEST_ID } from "./constants";
 
 export type CardType = {
   img: string;

@@ -1,7 +1,8 @@
 import "@testing-library/jest-dom";
 import { render, cleanup } from "@testing-library/react";
-import Card, { CardType } from "../Card";
+
 import { CARD_TEST_ID } from "../constants";
+import Card, { CardType } from "../Card";
 
 const mockCardData: CardType = {
   img: "mock-image-url",

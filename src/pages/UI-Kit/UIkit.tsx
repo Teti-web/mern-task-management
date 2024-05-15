@@ -2,13 +2,13 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "@components/UI-kit/Button/Button";
 import { IconStyleButton } from "@components/UI-kit/Button/constants";
-import { Size, Style } from "@/constants/constants";
-import Input from "@/components/UI-kit/Input/Input";
+import { Size, Style } from "@constants/constants";
+import Input from "@components/UI-kit/Input/Input";
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
-import ProgressBar from "@/components/ProgressBar/ProgressBar";
-import Card from "@/components/UI-kit/Card/Card";
+import ProgressBar from "@components/UI-kit/ProgressBar/ProgressBar";
+import Card from "@components/UI-kit/Card/Card";
 import ImageTesting from "@assets/Image.jpg";
-import Header from "@/components/Header/Header";
+import Header from "@components/Header/Header";
 
 const UIkit: FC = () => {
   const { t } = useTranslation();

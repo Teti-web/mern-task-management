@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export type SelectType = {
-  selectName: string;
+  buttonValue: string;
   isBorder?: boolean;
   options: {
     value: string;
@@ -14,25 +14,29 @@ export type SelectType = {
 const Select: FC<SelectType> = ({
   options,
   onChange,
-  selectName,
   isBorder,
+  buttonValue,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState<string>(selectName);
 
   let buttonSelectClass =
-    "flex justify-between items-center gap-2 text-secondary-500 w-full text-left font-primary font-medium text-[12px] px-[10px] py-[14px] transition-all ease-in-out duration-300 md:px-[16px] md:py-[20px] lg:text-[14px] hover:text-primary-500 focus:text-primary-600";
+    "flex justify-between items-center gap-[3px] text-secondary-500 w-full text-left font-primary font-medium text-[12px] px-[4px] py-[6px] transition-all ease-in-out duration-300 lg:text-[14px] hover:text-primary-500 focus:text-primary-600";
   const chevronClass = `w-[20px] h-[20px] text-secondary-500 transition-transform duration-300 ${isOpen ? "transform -rotate-180" : ""}`;
 
   if (isBorder) {
     buttonSelectClass +=
-      " border-[1px] border-solid rounded-[10px] border-border bg-white hover:border-primary-100 hover:text-secondary-500 focus:border-primary-200 focus:text-secondary-500";
+      " px-[10px] py-[14px] md:px-[16px] md:py-[20px] border-[1px] border-solid rounded-[10px] border-border bg-white hover:border-primary-100 hover:text-secondary-500 focus:border-primary-200 focus:text-secondary-500";
   }
+
+  const handleLanguageChange = (option: { value: string; text: string }) => {
+    onChange(option.value);
+    setIsOpen(false);
+  };
 
   return (
     <div className="w-full relative">
       <button className={buttonSelectClass} onClick={() => setIsOpen(!isOpen)}>
-        {selectedValue}
+        {buttonValue || options[0].text}{" "}
         <ChevronDownIcon className={chevronClass} />
       </button>
       {isOpen && (
@@ -41,11 +45,7 @@ const Select: FC<SelectType> = ({
             <li
               className="cursor-pointer hover:text-primary-500"
               key={index}
-              onClick={() => {
-                setSelectedValue(option.text);
-                onChange(option.value);
-                setIsOpen(false);
-              }}
+              onClick={() => handleLanguageChange(option)}
             >
               {option.text}
             </li>

@@ -1,5 +1,6 @@
-import { Size, Style } from "@/constants/constants";
 import { FC } from "react";
+import { Size, Style } from "@constants/constants";
+
 import { IconStyleButton, BUTTON_TEST_ID } from "./constants";
 
 export type ButtonType = {
