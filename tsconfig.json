@@ -26,7 +26,8 @@
       "@/*": ["src/*"],
       "@pages/*": ["src/pages/*"],
       "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@translation/*": ["src/translation/*"]
     },
 
     "types": ["jest", "@testing-library/jest-dom"]
