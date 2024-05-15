@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import Button from "@components/UI-kit/Button/Button";
 import { IconStyleButton } from "@components/UI-kit/Button/constants";
 import { Size, Style } from "@/constants/constants";
@@ -7,8 +8,11 @@ import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import ProgressBar from "@/components/ProgressBar/ProgressBar";
 import Card from "@/components/UI-kit/Card/Card";
 import ImageTesting from "@assets/Image.jpg";
+import Header from "@/components/Header/Header";
 
 const UIkit: FC = () => {
+  const { t } = useTranslation();
+
   const handleChange = () => {
     console.log("changed");
   };
@@ -18,6 +22,8 @@ const UIkit: FC = () => {
   return (
     <div>
       <h1>UI-kit page</h1>
+      <Header isAuthication={false} logo="Logo" btnLabel={t("btnSignIn")} />
+
       <div className="flex  w-max gap-[4px]">
         <Button
           isLink={false}
