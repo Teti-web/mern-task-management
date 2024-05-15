@@ -22,7 +22,7 @@ const UIkit: FC = () => {
   return (
     <div>
       <h1>UI-kit page</h1>
-      <Header isAuthication={false} logo="Logo" btnLabel={t("btnSignIn")} />
+      <Header isAuthication={true} title="Logo" />
 
       <div className="flex  w-max gap-[4px]">
         <Button
