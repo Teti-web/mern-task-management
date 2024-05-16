@@ -39,6 +39,9 @@ const Button: FC<ButtonType> = ({
   } else if (style === Style.SECONDARY) {
     className +=
       " text-secondinary-400 font-semibold bg-white border-[1px] border-secondinary-200 hover:text-secondinary-500 hover:border-secondinary-400 active:bg-secondinary-200 active:text-secondinary-400 focus:border-secondinary-200 focus:text-secondinary-500 focus:bg-white";
+  } else if (style === Style.CIRCLE) {
+    className +=
+      " text-secondinary-400  rounded-full font-semibold bg-white border-[1px] border-secondinary-200 hover:text-secondinary-500 hover:border-secondinary-400 active:bg-secondinary-200 active:text-secondinary-400 focus:border-secondinary-200 focus:text-secondinary-500 focus:bg-white";
   }
 
   if (size === Size.SMALL) {
@@ -47,6 +50,8 @@ const Button: FC<ButtonType> = ({
     className += " text-[12px] pt-[9px] pb-[9px] pl-[16px] pr-[16px]";
   } else if (size === Size.LARGE) {
     className += " text-[16px] pt-[13px] pb-[13px] pl-[41px] pr-[41px]";
+  } else if (size === Size.CIRCLE) {
+    className += " text-[16px] p-[10px] md:p-[14px] ";
   }
 
   if (isDisabled) {

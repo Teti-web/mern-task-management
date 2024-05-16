@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": "src",
-      "@pages": "src/pages",
-      "@assets": "src/assets",
-      "@components": "src/components",
-      "@constants": "src/constants",
-      "@translation": "src/translation",
+      "@": "/src",
+      "@pages": "/src/pages",
+      "@assets": "/src/assets",
+      "@components": "/src/components",
+      "@constants": "/src/constants",
+      "@translation": "/src/translation",
     },
   },
 });
