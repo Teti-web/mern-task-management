@@ -27,7 +27,7 @@ const Header: FC<HeaderType> = ({ logo, isAuthication, btnLabel, title }) => {
   };
   useEffect(() => {
     setIsHaveNotification(true);
-  });
+  }, []);
 
   if (!isAuthication) {
     return (
